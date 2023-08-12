@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title%}
+        <title>Microblog- {{title}}</title>
+        {%else%}
+        <title>Microblog only</title>
+        {% endif %}
+    </head>
+    <body>
+        <div><h1>{{user.username}}</h1></div>
+        <div>
+        {% for post in posts %}
+        <p>
+            <b>New post by</b> {{post.author}}:
+            <i>{{post.content}}</i>
+        </p>
+        {% endfor %}
+    </div>
+    </body>
+</html>
