@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        {% if title%}
-        <title>Microblog- {{title}}</title>
-        {%else%}
-        <title>Microblog only</title>
-        {% endif %}
-    </head>
-    <body>
+{% extends "base.html" %}
+
+{% block content %}
         <div><h1>{{user.username}}</h1></div>
         <div>
         {% for post in posts %}
@@ -17,5 +10,4 @@
         </p>
         {% endfor %}
     </div>
-    </body>
-</html>
+{% endblock %}
