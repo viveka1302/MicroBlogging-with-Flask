@@ -7,8 +7,8 @@ from app.forms import LoginForm
 @app.route('/index')
 def index():
     title="Home"
-    user={"username": "Miguel P", "age":46}
-    posts=[{'author': "Mark Manson", 'content':"Hello Hi dsada"},{'author':"Gerard Way", 'content':"MCR"}]
+    user={"username": "Vivek", "age":20}
+    posts=[{'author': "Devyansh Samyal", 'content':"Hello Hi!!"},{'author':"Mihir Dhingra", 'content':"Hola amigo"}]
     return render_template("index.html", title=title, user=user, posts=posts)
 
 @app.route('/login', methods=['GET', 'POST'])
